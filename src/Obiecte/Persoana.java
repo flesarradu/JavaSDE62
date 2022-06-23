@@ -44,4 +44,7 @@ public class Persoana {
         Prenume = prenume;
         Varsta = varsta;
     }
+    public static void blablabla(){
+        System.out.println("Bla");
+    }
 }

@@ -24,6 +24,13 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
 
+        fibo(26);
+        System.out.println();
+        System.out.println(fiboRec(5));
+        System.out.println(cmmdc(55,17));
+        System.out.println(cmmdc(26,4));
+        System.out.println(cmmdc2(55,17));
+        System.out.println(cmmdc2(26,4));
 
         //Afisati media varstei persoanelor din lista
         List<Persoana>  persoane = new ArrayList<>();
@@ -65,7 +72,49 @@ public class Main {
         System.out.println("Media varstei persoane este: " + mediaPersoane);
         System.out.println("Media notelor este: " + mediaStudenti);
 
+        Clasa.main(args);
+
     }
+
+    //Algoritmul lui euclid
+    public static int cmmdc(int a, int b){
+        while(b!=0){
+            int r = a%b;
+            a=b;
+            b=r;
+        }
+        return a;
+    }
+    //Scaderi repetate
+    public static int cmmdc2(int a, int b){
+        while(a!=b){
+            if(a>b)
+                a-=b;
+            else
+                b-=a;
+        }
+        return a;
+    }
+
+    public static void fibo(int n){
+        int f1=1, f2=1;
+        System.out.print(f1+" "+f2+" ");
+        for(int i=0; i < n-2; i++){
+            int f3 = f1+f2;
+            f1 = f2;
+            f2 = f3;
+            System.out.print(f3+" ");
+        }
+    }
+
+    public static int fiboRec(int n){
+         if(n==0 || n==1)
+             return 1;
+         return fiboRec(n-1)+fiboRec(n-2);
+    }
+
+
+
 
     public static void printf(String format, Object... args){
         System.out.printf(format, args);
