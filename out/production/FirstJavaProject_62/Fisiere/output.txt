@@ -1,4 +1,1 @@
-Persoana{Nume='Flesar', Prenume='Radu', Varsta='19'}
-Persoana{Nume='Ion', Prenume='Ion', Varsta='20'}
-Persoana{Nume='Popescu', Prenume='Marius', Varsta='25'}
-Persoana{Nume='Flesar', Prenume='Radu', Varsta='19'}Persoana{Nume='Ion', Prenume='Ion', Varsta='20'}Persoana{Nume='Popescu', Prenume='Marius', Varsta='25'}
+Scriu in fisier...

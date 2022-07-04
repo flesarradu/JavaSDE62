@@ -2,7 +2,9 @@ package Obiecte;
 
  //Creati o clasa cu cel putin 3 atribute de tip diferit
 public class Student extends Persoana {
-    String Profil;
+
+
+     String Profil;
     public double Media;
 
     //Constructori (alt + insert)
@@ -22,6 +24,10 @@ public class Student extends Persoana {
         Media = media;
         Profil = "n-avem";
     }
+
+     public String getProfil() {
+         return Profil;
+     }
 
     @Override
     public String toString(){

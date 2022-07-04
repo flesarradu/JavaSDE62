@@ -14,12 +14,12 @@ import java.util.Scanner;
 public class FisiereExercitii {
     public static void main(String[] args) {
 
-        File fisier = new File("D:\\Proiecte IntelliJ\\FirstJavaProject_62\\src\\Fisiere\\input.txt");
+        File fisier = new File("D:\\Proiecte IntelliJ\\FirstJavaProject_62\\src\\Fisiere\\input.ftxt");
         List<Persoana> pers = new ArrayList<>();
 
         try {
             Scanner scanner = new Scanner(fisier);
-            while(scanner.hasNextLine()) {
+            while(scanner.hasNextDouble()) {
                 String linie = scanner.nextLine();
                 var date = linie.split(" ");
                 pers.add(new Persoana(date[0], date[1], Integer.parseInt(date[2])));
@@ -66,4 +66,16 @@ public class FisiereExercitii {
             throw new RuntimeException(e);
         }
     }
+
+    /*
+        EXERCITIUL 1)
+            Cititi din fisierul input.txt toate valorile de tip double si afisati media lor.
+
+
+        Exercitiul 2)
+            In fisierul input.txt se gaseste cate un numar de tip double pe fiecare linie.
+            Cititi fisierul linie cu linie, separati partea reala si partea imaginara a numarului, afisati-le si
+            rescrieti numarul in fisierul output.txt pe o linie noua inlocuind punctul cu virgula.
+
+     */
 }
